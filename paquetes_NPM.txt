@@ -1,0 +1,9 @@
+npm install stylus -g ------> Instalar stylus de manera global en el equipo.
+npm install gulp -g --------> Lo mismo pero con gulp
+
+
+npm install --save-dev gulp ----------> Instalar localmente y guardar como dependencia de desarrollo en package.json
+npm install --save-dev gulp-webserver
+npm install --save-dev gulp-stylus
+npm install --save-dev nib -----------> Plugin de stylus para añadir los prefijos a las propiedades de css que lo requieran.
+npm install --save-dev gulp-minify-css > Plugin para minificar el CSS final.
