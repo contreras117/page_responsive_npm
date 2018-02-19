@@ -12,7 +12,7 @@ var config = {
     output: './build/css'
   },
   html: {
-    watch: '.src/*.html'
+    watch: '.build/*.html'
   }
 }
 

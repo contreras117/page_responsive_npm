@@ -1,0 +1,55 @@
+@import './normalize.css'
+@import './reset'
+@import 'nib'
+
+
+// Variable. El signo $ se pone por nomenclatura, pero no es obligatorio.
+$black = #212121
+$white = #FAFAFA
+
+
+body
+  font-size 16px
+
+
+.header
+  background $black
+  color $white
+  height 64px
+  width 100%
+  position fixed
+  top 0
+  left 0
+  z-index 10
+
+
+  //.header-mobile
+  &-mobile
+    display flex
+    justify-content space-between
+
+  &-logo
+    order 1
+
+  //.header-btn-nav
+  &-btn-nav
+    order 2
+    border 0
+    border-radius 5px
+    background $black
+
+  // '&' concatena lo que ponga despues al nombre de la clase actual.
+  // En este caso se forma la clase -header-menu-navbar
+  &-menu-navbar
+    background $black
+    list-style-type none
+    height 0
+    overflow hidden
+
+  //.header-menu-list
+  &-menu-list
+
+    //.header-menu-list-item
+    &-item
+      a
+        text-decoration none
