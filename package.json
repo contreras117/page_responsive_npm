@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel COntreras <daniel_contreras117@hotmail.com>",
+  "author": "Daniel Contreras <daniel_contreras117@hotmail.com>",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",

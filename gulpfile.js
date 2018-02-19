@@ -42,7 +42,7 @@ gulp.task('build:css', function() {
 // Tarea para vijilar cuando se produscan cambios en los ficheros especificados y ejecute las tareas de build.
 gulp.task('watch', function(){
   gulp.watch(config.styles.watch, ['build:css']);
-  gulp.watch(config.html.watch,['build']);
+  //gulp.watch(config.html.watch,['build']);
 
 });
 

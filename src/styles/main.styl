@@ -1,4 +1,4 @@
-@import './normalize.css'
+@import '../normalize.css'
 @import './reset'
 @import 'nib'
 
@@ -21,6 +21,7 @@ body
   top 0
   left 0
   z-index 10
+  line-height 64px
 
 
   //.header-mobile
@@ -30,6 +31,7 @@ body
 
   &-logo
     order 1
+    margin-left 1rem
 
   //.header-btn-nav
   &-btn-nav
@@ -37,19 +39,58 @@ body
     border 0
     border-radius 5px
     background $black
+    margin-right 1rem
 
   // '&' concatena lo que ponga despues al nombre de la clase actual.
   // En este caso se forma la clase -header-menu-navbar
   &-menu-navbar
     background $black
-    list-style-type none
-    height 0
-    overflow hidden
 
   //.header-menu-list
   &-menu-list
+    list-style-type none
+    height 0
+    overflow hidden
+    transition 0.3s height ease
+    line-height 1rem
+
+    //.header-menu-list--show
+    &--show
+      height 300px
+
+
 
     //.header-menu-list-item
     &-item
       a
+        display block
         text-decoration none
+        color $white
+        width 100%
+        text-align center
+        padding 1.5rem
+
+
+@media screen and (min-width 768px)
+  body
+    font-size 20px
+  
+  .header
+    display flex
+    justify-content space-between
+    flex-wrap wrap 
+    height 80px
+    transition 0.3s ease
+    line-height 80px
+
+    &-btn-nav
+      display none
+    
+    &-menu-list
+      height 80px
+
+      &-item
+        display inline-block
+        a
+          padding 0 1rem
+          text-align left
