@@ -7,3 +7,6 @@ npm install --save-dev gulp-webserver
 npm install --save-dev gulp-stylus
 npm install --save-dev nib -----------> Plugin de stylus para añadir los prefijos a las propiedades de css que lo requieran.
 npm install --save-dev gulp-minify-css > Plugin para minificar el CSS final.
+npm i -D browserify -------------------> libreria para procesar los archivos js. "i -D" es lo mismo que "install --save-dev"
+npm i -D vinyl-buffer vinyl-source-stream
+npm i -D uglify

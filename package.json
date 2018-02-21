@@ -9,10 +9,14 @@
   "author": "Daniel Contreras <daniel_contreras117@hotmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "browserify": "^16.1.0",
     "gulp": "^3.9.1",
     "gulp-minify-css": "^1.2.4",
     "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1",
-    "nib": "^1.1.2"
+    "nib": "^1.1.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

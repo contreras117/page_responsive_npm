@@ -12,7 +12,7 @@
 		<div class="header-mobile">
 			<h1 class="header-logo">Logo</h1>
 			<button id="btnMenu" class="header-btn-nav">
-				<span class="icon-menu"></span>
+				<i class="fa fa-bars"></i>
 			</button>
 		</div>
 		<nav class="header-menu-navbar">
@@ -78,38 +78,6 @@
 	
 	
 	
-	<script>
-		var $btnMenu = document.getElementById('btnMenu');
-		var $navbarMenu = document.getElementById('navbarMenu');
-		var $header = document.querySelector('.header');
-		document.addEventListener('DOMContentLoaded', onDOMLoad);
-
-		function onScroll()
-		{
-			if(window.scrollY >= 200)
-			{
-				$header.classList.add('header--light');
-				console.log(window.scrollY);
-			}
-			else
-			{
-				$header.classList.remove('header--light');
-				console.log(window.scrollY);
-			}
-		}
-
-		function onClickMenu()
-		{
-			$navbarMenu.classList.toggle('header-menu-list--show');
-		}
-
-		function onDOMLoad()
-		{
-			$btnMenu.addEventListener('click', onClickMenu);
-			window.addEventListener('scroll',onScroll);
-		}
-
-		
-	</script>
+	<script src="./js/bundle.js">	</script>
 </body>
 </html>
