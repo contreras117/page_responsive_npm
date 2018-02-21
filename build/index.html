@@ -29,24 +29,84 @@
 			</ul>
 		</nav>
 	</header>
-	<section>
-		<div class="video-container">
-			<video controls poster="">
-				<source src="./320x240.ogg" />
-			</video>
-		</div>
-	</section>
+	<div class="content">
+		<section class="content-text">
+			<div class="video-container">
+				<!-- <video controls poster="">
+					<source src="./320x240.ogg" />
+				</video> -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/ziLWPlVN0MM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</section>
+	
+		<section class="content-features">
+			<div class="content-block">
+				<h3 class="conent-block-title">Feature 1</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident eos, odio reiciendis distinctio quaerat excepturi quo accusamus voluptatibus, porro praesentium, delectus culpa commodi esse dolorem laborum magni laudantium.</p>
+			</div>
+			<div class="content-block">
+				<h3 class="conent-block-title">Feature 2</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident eos, odio reiciendis distinctio quaerat excepturi quo accusamus voluptatibus, porro praesentium, delectus culpa commodi esse dolorem laborum magni laudantium.</p>
+			</div>
+			<div class="content-block">
+				<h3 class="conent-block-title">Feature 3</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident eos, odio reiciendis distinctio quaerat excepturi quo accusamus voluptatibus, porro praesentium, delectus culpa commodi esse dolorem laborum magni laudantium.</p>
+			</div>
+			<div class="content-block">
+				<h3 class="conent-block-title">Feature 4</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat perferendis provident eos, odio reiciendis distinctio quaerat excepturi quo accusamus voluptatibus, porro praesentium, delectus culpa commodi esse dolorem laborum magni laudantium.</p>
+			</div>
+		</section>
+
+		<section class="content-text">
+			<picture>
+				<source media="(min-width: 768px)" srcset="ruta/imagen.jpg"/>
+				<img src="" alt="">
+			</picture>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In a earum cum et ipsum facilis soluta praesentium officia, atque aut, numquam asperiores eum, possimus accusantium saepe consequatur ratione illum omnis?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus error nesciunt quasi autem quaerat dolor aut ad fugit temporibus ex quod deserunt, eveniet aspernatur, corrupti impedit, velit soluta repellat excepturi.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi minima natus enim, odio atque voluptatum aut consequuntur laboriosam, cupiditate nesciunt pariatur molestias? Ex officia expedita sed optio! Eum, amet!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, at autem dolores voluptas odio deleniti iure blanditiis debitis nostrum eveniet placeat saepe nesciunt esse! Quod vero ullam nam illum!
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, natus. Est quae vel aliquid numquam totam illum esse reprehenderit, dicta autem hic molestiae excepturi sit reiciendis deleniti perspiciatis magnam illo!
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta fugiat quo. Illo nulla recusandae ad? Tempora repellat, omnis molestiae delectus facere voluptatem nobis illo vel iure nisi quam dignissimos?
+			</p>
+		</section>
+	</div>
+	
 	
 	
 	<script>
 		var $btnMenu = document.getElementById('btnMenu');
 		var $navbarMenu = document.getElementById('navbarMenu');
-		$btnMenu.addEventListener('click', onClickMenu);
+		var $header = document.querySelector('.header');
+		document.addEventListener('DOMContentLoaded', onDOMLoad);
+
+		function onScroll()
+		{
+			if(window.scrollY >= 200)
+			{
+				$header.classList.add('header--light');
+				console.log(window.scrollY);
+			}
+			else
+			{
+				$header.classList.remove('header--light');
+				console.log(window.scrollY);
+			}
+		}
 
 		function onClickMenu()
 		{
 			$navbarMenu.classList.toggle('header-menu-list--show');
 		}
+
+		function onDOMLoad()
+		{
+			$btnMenu.addEventListener('click', onClickMenu);
+			window.addEventListener('scroll',onScroll);
+		}
+
+		
 	</script>
 </body>
 </html>

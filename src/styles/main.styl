@@ -23,6 +23,14 @@ body
   z-index 10
   line-height 64px
 
+  &--light
+    background $white
+    color $black
+
+    &-menu-navbar
+      background $white
+      color $black
+
 
   //.header-mobile
   &-mobile
@@ -40,6 +48,7 @@ body
     border-radius 5px
     background $black
     margin-right 1rem
+    color $white
 
   // '&' concatena lo que ponga despues al nombre de la clase actual.
   // En este caso se forma la clase -header-menu-navbar
@@ -97,3 +106,4 @@ body
           text-align left
 
 @import './video'
+@import './content'
